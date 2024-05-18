@@ -142,7 +142,7 @@ fn main() {
 
                 let both_channels = packed(&resampled);
                 while !producer.rb().is_empty() {
-                    // std::thread::sleep(std::time::Duration::from_nanos(1));
+                    std::thread::sleep(std::time::Duration::from_nanos(1));
                 }
                 producer.push_slice(both_channels);
             }
